@@ -10,7 +10,6 @@ export const App = () => (
     <PaginationContainer location={history.location}>
       {props => (
         <>
-          {console.log("app", props)}
           <Pagination {...props} count={7} location={history.location} />
           <ListContainer {...props} />
           <Pagination {...props} count={7} location={history.location} />

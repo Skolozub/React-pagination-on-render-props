@@ -10,14 +10,13 @@ export class ListContainer extends Component {
 
   getList = async () => {
     this.setState({ isLoading: true });
-    console.log(this.props.params);
 
     const { data } = await this.fetchList(this.props.params);
 
     this.setState({ list: data.results, isLoading: false });
   };
 
-  componentDidMount = async () => {
+  componentDidMount = () => {
     this.getList();
   };
 
